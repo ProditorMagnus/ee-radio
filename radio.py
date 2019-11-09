@@ -3,7 +3,10 @@
 import urllib.request
 import datetime
 import json
+import get_common
 
+# https://dad.akaver.com/Home/Feeds
+# https://dad.akaver.com/api/SongTitles/SKYMEDIAALL gives many stations
 # to improve: check timestamp, and if too old raise some notice somewhere
 folder = "/home/ravana/python/radio/out/"
 
@@ -40,3 +43,5 @@ try:
 except Exception as e:
 	print(e)
 	pass
+
+get_common.get(folder, "rockfm", "ROCKFM")
